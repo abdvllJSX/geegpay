@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./dashboard.scss";
 
-import Chart from 'chart.js/auto';
+import  Chart  from 'chart.js/auto';
 
 const Dashboard = () => {
     const chartRef = useRef(null);
