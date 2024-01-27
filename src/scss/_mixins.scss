@@ -1,0 +1,18 @@
+@function convertToRem($value) {
+    $remValue: calc(floor((calc($value / 12)) * 100) / 100) + rem;
+    @return $remValue;
+}
+
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+
+// 
+@mixin tablets {
+    @media (mix-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}

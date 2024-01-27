@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import './variable';
+@import './mixins';
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: $secondary-background;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 0.6944444444vw;
+
+    @include mobile {
+        font-size: 2.66vw;
+    }
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+
+.orange {
+    background-color: #FFB74A;
+}
+
+.red {
+    background: #FF4A55;
+}
+
+.blue {
+    background-color: #54C5EB;
+}
+
+.purple {
+    background-color: $purple;
+
+}
+
+.active {
+    background-color: $primary-color;
+}
+
+h1 {
+    color: $black-600;
+    font-size: convertToRem(20);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.8rem;
+
+    @include mobile{
+        font-size: convertToRem(18);
+    }
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+h2 {
+    color: #26282C;
+    font-size: convertToRem(18);
+    font-weight: 600;
+
+    @include mobile{
+        font-size: convertToRem(15);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mobile--only{
+    display: none;
+
+    @include mobile{
+         display: block;
+    }
+}

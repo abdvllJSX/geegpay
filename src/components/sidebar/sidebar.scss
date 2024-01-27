@@ -1,0 +1,121 @@
+@import "../../scss/main";
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    width: convertToRem(80);
+    border-right: 1px solid #EBECF2;
+    padding: convertToRem(20);
+    background-color: $blue-white;
+    align-items: center;
+
+    @include mobile {
+        bottom: 0;
+        height: fit-content;
+        z-index: 3;
+        width: 100vw;
+    }
+
+    .logo {
+        width: convertToRem(40);
+        height: convertToRem(40);
+        margin-bottom: convertToRem(20);
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .sidebar-menu {
+        display: flex;
+        align-items: center;
+        row-gap: 1.6rem;
+        flex-direction: column;
+
+        @include mobile {
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .theme {
+            border-radius: 10rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: .8rem;
+            padding: .8rem;
+            background: #FFF;
+
+            @include mobile {
+                display: none;
+            }
+
+
+            .theme-menu-links {
+                .theme-conteiner {
+                    width: convertToRem(30);
+                    height: convertToRem(30);
+                    border-radius: convertToRem(94);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: convertToRem(17);
+                        height: convertToRem(17);
+                    }
+
+                }
+
+                img {
+                    width: convertToRem(30);
+                    height: convertToRem(30);
+                }
+            }
+        }
+
+        .sidebar-menu-links {
+            width: convertToRem(40);
+            height: convertToRem(40);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a {
+
+            img {
+                width: convertToRem(24);
+                height: convertToRem(24);
+            }
+
+        }
+    }
+
+    .sidebar-footer {
+        margin-top: auto;
+        display: flex;
+        row-gap: convertToRem(16);
+        align-items: center;
+        flex-direction: column;
+
+        @include mobile {
+            display: none;
+        }
+
+        a {
+            width: convertToRem(40);
+            height: convertToRem(40);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: convertToRem(24);
+                height: convertToRem(24);
+            }
+        }
+    }
+}
